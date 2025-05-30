@@ -283,12 +283,12 @@ footer .banner img {
 
 .arriba-icon {
     position: fixed;
-    right: 60px;
+    right: 20px;
     bottom: 1px;
-    width: 50px;
+    width: 40px;
     height: auto;
     opacity: 40%;
-    padding: 40px;
+    padding: 20px;
 }
 
 .arriba-icon:hover {
