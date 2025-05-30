@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formulario-contacto');
     const mensajeEstado = document.getElementById('mensaje-estado');
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzNq1boHkIV4LF41beCKnphS9l_6iuTODAi3vBCAUTF-GeNmZ50SNcTq4Lzih-q_7WDIA/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzE8lhyWb8Ctg7v5jsusyXpldBwjfBa0LmOkwlyNKAzmcEPlHcAEVRAmyEFE4R5yaaWqQ/exec';
 
     if (form) {
         form.addEventListener('submit', function (e) {
@@ -24,16 +24,16 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => { mensajeEstado.innerHTML = ""; }, 5000);
     }
 
-    const estudiaSi = document.getElementById('estudia-si');
-    const estudiaNo = document.getElementById('estudia-no');
+    const comproSi = document.getElementById('compro-si');
+    const comproNo = document.getElementById('compro-no');
     const selectorContainer = document.getElementById('selector-container');
 
     function toggleSelector() {
-        selectorContainer.style.display = estudiaSi.checked ? 'block' : 'none';
+        selectorContainer.style.display = comproSi.checked ? 'block' : 'none';
     }
 
-    if (estudiaSi && estudiaNo) {
-        estudiaSi.addEventListener('change', toggleSelector);
-        estudiaNo.addEventListener('change', toggleSelector);
+    if (comproSi && comproNo) {
+        comproSi.addEventListener('change', toggleSelector);
+        comproNo.addEventListener('change', toggleSelector);
     }
 });
