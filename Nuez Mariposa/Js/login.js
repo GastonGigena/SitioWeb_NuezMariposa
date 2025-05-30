@@ -1,3 +1,5 @@
+
+/*Login*/
 document.addEventListener("DOMContentLoaded", function () {
   const loginFormAside = document.getElementById("loginFormAside");
   if (loginFormAside) {
@@ -11,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+/*Carrusel*/
 
 let indice = 0;
 

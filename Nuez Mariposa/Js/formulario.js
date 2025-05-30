@@ -1,3 +1,5 @@
+/*Formulario de contacto*/
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formulario-contacto');
     const mensajeEstado = document.getElementById('mensaje-estado');
