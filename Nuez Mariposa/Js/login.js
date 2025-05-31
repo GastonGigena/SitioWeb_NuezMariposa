@@ -1,4 +1,3 @@
-
 /*Login*/
 document.addEventListener("DOMContentLoaded", function () {
   const loginFormAside = document.getElementById("loginFormAside");
