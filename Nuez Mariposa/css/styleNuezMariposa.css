@@ -501,3 +501,34 @@ footer .banner img {
     flex-shrink: 0;
     user-select: none;
   }
+
+  /* Página de bienvenida */
+.pagina-bienvenida {
+    background-color: #e0dfdc;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .contenedor-bienvenida {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .logo-bienvenida {
+    width: 250px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+  .mensaje-bienvenida {
+    font-size: 2em;
+    color: #A98F71;
+    margin-bottom: 20px;
+  }
+  
+  .texto-redireccion {
+    font-size: 1em;
+    color: #555;
+  }
+  

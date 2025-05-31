@@ -5,10 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     loginFormAside.addEventListener("submit", function (e) {
       e.preventDefault();
       const nombreUsuario = document.getElementById("usuario").value;
-      alert(
-        "¡Hola, " + nombreUsuario + "! Gracias por ingresar a nuestro sitio"
-      );
-      window.location.reload();
+      localStorage.setItem("nombreUsuario", nombreUsuario); // Guardamos el nombre
+      window.location.href = "bienvenida.html"; // Redirigimos a la página de bienvenida
     });
   }
 });
@@ -24,6 +22,26 @@ function moverCarrusel(direccion) {
   carrusel.style.transform = `translateX(-${indice * 100}%)`;
 }
 
+
+/*Suavizado de scroll*/
+
+function scrollSuaveArriba() {
+  const duracion = 500;
+  const inicio = window.scrollY;
+  const startTime = performance.now();
+
+  function pasoScroll(timestamp) {
+    const tiempoPasado = timestamp - startTime;
+    const progreso = Math.min(tiempoPasado / duracion, 1);
+    const posicion = inicio * (1 - progreso);
+    window.scrollTo(0, posicion);
+    if (progreso < 1) {
+      requestAnimationFrame(pasoScroll);
+    }
+  }
+
+  requestAnimationFrame(pasoScroll);
+}
 
 
 

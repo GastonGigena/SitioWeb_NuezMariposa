@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             fetch(scriptURL, { method: 'POST', body: datos })
                 .then(response => {
-                    mostrarMensaje("Formulario enviado correctamente.", "green");
+                    alert("Formulario enviado correctamente.");
                     form.reset();
                     selectorContainer.style.display = 'none'; // Ocultar selector después del envío
                 })
