@@ -450,3 +450,21 @@ footer .banner img {
         font-size: 2.5rem;
     }
 }
+
+/* cargar página mas lento */
+.fade-in {
+    opacity: 0;
+    animation: aparecer 1s ease-out forwards;
+  }
+  
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
