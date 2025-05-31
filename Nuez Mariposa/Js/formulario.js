@@ -46,3 +46,31 @@ document.addEventListener('DOMContentLoaded', function () {
         comproNo.addEventListener('change', toggleSelector);
     }
 });
+
+const carrusel = document.getElementById("carruselHome");
+const total = carrusel.children.length; // 10 imágenes
+let indiceLoop = 0;
+
+function moverCarrusel() {
+  indiceLoop++;
+  carrusel.style.transition = "transform 1s ease-in-out";
+  carrusel.style.transform = `translateX(-${indiceLoop * 499}px)`;
+
+  if (indiceLoop === total / 2) {
+    carrusel.addEventListener('transitionend', resetCarrusel, { once: true });
+  }
+}
+
+function resetCarrusel() {
+  carrusel.style.transition = "none";
+  carrusel.style.transform = "translateX(0)";
+  indiceLoop = 0;
+
+  carrusel.offsetHeight; // fuerza reflow
+
+  setTimeout(() => {
+    carrusel.style.transition = "transform 1s ease-in-out";
+  }, 50);
+}
+
+setInterval(moverCarrusel, 4000);

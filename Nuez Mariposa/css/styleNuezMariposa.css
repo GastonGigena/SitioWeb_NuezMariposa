@@ -303,7 +303,7 @@ footer .banner img {
     margin: 30px auto;
     overflow: hidden;
     border-radius: 20px;
-    background-color: #fafafa;
+    background-color: #e7ded4;
 }
 
 .carrusel {
@@ -323,7 +323,7 @@ footer .banner img {
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #000;
+    border: 3px solid #A98F71;
     margin-bottom: 10px;
 }
 
@@ -460,11 +460,44 @@ footer .banner img {
   @keyframes aparecer {
     from {
       opacity: 0;
-      transform: translateY(8px);
+      transform: translateY(4px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
+
+ 
+
+
+  .imagen-carrusel {
+    width: 499px; 
+    height: auto; 
+    display: block;
+    margin: 20px auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+ 
   
+  .carrusel-home {
+    width: 499px; 
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .carrusel-inner {
+    display: flex;
+    width: calc(499px * 10);
+    transition: transform 1s ease-in-out;
+  }
+  .carrusel-inner img {
+    width: 499px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    user-select: none;
+  }
