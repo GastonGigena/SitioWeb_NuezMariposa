@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SitioWeb_NuezMariposa
 
 Instituto Técnico Superior Córdoba
