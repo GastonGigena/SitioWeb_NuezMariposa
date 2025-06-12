@@ -10,8 +10,6 @@ body {
     box-sizing: border-box;
 }
 
-
-
 /*Grid)*/
 
 .container {
@@ -41,7 +39,6 @@ header img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-
 }
 
 .titulo-principal {
@@ -51,7 +48,6 @@ header img {
     color: #333;
     font-weight: bold;
 }
-
 
 /* Nav*/
 
@@ -87,7 +83,6 @@ nav ul li a:hover {
     background-color: rgba(226, 19, 19, 0.1);
 }
 
-
 /*Section y Aside*/
 
 section {
@@ -117,7 +112,6 @@ section {
     width: auto;
 }
 
-
 .sin-aside {
     grid-template-areas:
         "header"
@@ -126,7 +120,6 @@ section {
         "footer";
     grid-template-columns: 1fr;
 }
-
 
 .main-centrado {
     max-width: 900px;
@@ -140,8 +133,6 @@ section {
 #selector-container {
     display: none;
 }
-
-
 
 /*Formulario de Login*/
 
@@ -245,8 +236,6 @@ footer .footer-links {
     padding: 0 1rem;
 }
 
-
-
 footer .footer-links a {
     color: #ffffff;
     text-decoration: none;
@@ -295,7 +284,6 @@ footer .banner img {
     opacity: 100%;
 }
 
-
 /* Carrusel quienes somos*/
 .carrusel-equipo {
     width: 100%;
@@ -334,8 +322,6 @@ footer .banner img {
     gap: 10px;
 }
 
-
-
 /*Media Queries*/
 
 @media (max-width: 1023px) {
@@ -355,9 +341,7 @@ footer .banner img {
     }
 }
 
-
 /* Móviles*/
-
 
 @media (max-width: 576px) {
     .container {
@@ -380,13 +364,31 @@ footer .banner img {
         gap: 0.5rem;
     }
 
+    aside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Contenido textual primero */
+    .login-container-aside {
+        order: 1;
+    }
+
+    /* Imágenes abajo, tamaño reducido y centradas */
+    .imagen-bajo-formulario {
+        order: 2;
+        margin-top: 1rem;
+    }
+
     .imagen-bajo-formulario img {
-        max-width: 40%;
+        max-width: 50%;
         height: auto;
         width: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-
 
 /* Tablets*/
 
@@ -414,7 +416,6 @@ footer .banner img {
     }
 }
 
-
 /* notebooks*/
 
 @media (max-width: 992px) {
@@ -437,7 +438,6 @@ footer .banner img {
     }
 }
 
-
 /* PC*/
 
 @media (min-width: 1200px) {
@@ -455,80 +455,76 @@ footer .banner img {
 .fade-in {
     opacity: 0;
     animation: aparecer 1s ease-out forwards;
-  }
+}
   
-  @keyframes aparecer {
+@keyframes aparecer {
     from {
-      opacity: 0;
-      transform: translateY(4px);
+        opacity: 0;
+        transform: translateY(4px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
- 
-
-
-  .imagen-carrusel {
+.imagen-carrusel {
     width: 499px; 
     height: auto; 
     display: block;
     margin: 20px auto; 
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
- 
-  
-  .carrusel-home {
+}
+
+.carrusel-home {
     width: 499px; 
     overflow: hidden;
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
-  
-  .carrusel-inner {
+}
+
+.carrusel-inner {
     display: flex;
     width: calc(499px * 10);
     transition: transform 1s ease-in-out;
-  }
-  .carrusel-inner img {
+}
+
+.carrusel-inner img {
     width: 499px;
     height: auto;
     display: block;
     flex-shrink: 0;
     user-select: none;
-  }
+}
 
-  /* Página de bienvenida */
+/* Página de bienvenida */
 .pagina-bienvenida {
     background-color: #e0dfdc;
     font-family: 'Arial', sans-serif;
     text-align: center;
     padding: 100px 20px;
-  }
+}
   
-  .contenedor-bienvenida {
+.contenedor-bienvenida {
     max-width: 600px;
     margin: 0 auto;
-  }
+}
   
-  .logo-bienvenida {
+.logo-bienvenida {
     width: 250px;
     height: auto;
     margin-bottom: 30px;
-  }
+}
   
-  .mensaje-bienvenida {
+.mensaje-bienvenida {
     font-size: 2em;
     color: #A98F71;
     margin-bottom: 20px;
-  }
+}
   
-  .texto-redireccion {
+.texto-redireccion {
     font-size: 1em;
     color: #555;
-  }
-  
+}
