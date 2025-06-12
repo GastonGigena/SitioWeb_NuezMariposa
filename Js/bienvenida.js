@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Redirigir al home luego de 5 segundos
     setTimeout(() => {
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     }, 5000);
   });
